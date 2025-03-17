@@ -1,0 +1,32 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Frontend build outputs (if you run any build process like Webpack, etc.)
+frontend/dist/
+frontend/build/
+
+# .env files for sensitive data (keep out of version control)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Ignore uploads (if you're storing files in a local uploads folder)
+frontend/uploads/
+
+# Ignore temp or cache files
+frontend/.cache/
