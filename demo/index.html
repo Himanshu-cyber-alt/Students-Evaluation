@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Evaluation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Evaluation System</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active" data-section="personal-info">Personal Info</a></li>
+                    <li><a href="#" data-section="academic-info">Academic Info</a></li>
+                    <li><a href="#" data-section="course-selection">Course Selection</a></li>
+                    <li><a href="#" data-section="results">Results</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Personal Information Section -->
+            <section id="personal-info" class="active-section">
+                <h2>Personal Information</h2>
+                <form id="personal-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="roll">Roll Number:</label>
+                        <input type="text" id="roll" name="roll" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="semester">Semester:</label>
+                        <select id="semester" name="semester" required>
+                            <option value="">Select Semester</option>
+                            <option value="1">1st Semester</option>
+                            <option value="2">2nd Semester</option>
+                            <option value="3">3rd Semester</option>
+                            <option value="4">4th Semester</option>
+                            <option value="5">5th Semester</option>
+                            <option value="6">6th Semester</option>
+                            <option value="7">7th Semester</option>
+                            <option value="8">8th Semester</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="branch">Branch:</label>
+                        <select id="branch" name="branch" required>
+                            <option value="">Select Branch</option>
+                            <option value="CS">Computer Science</option>
+                            <option value="IT">Information Technology</option>
+                            <option value="ECE">Electronics & Communication</option>
+                            <option value="EE">Electrical Engineering</option>
+                            <option value="ME">Mechanical Engineering</option>
+                            <option value="CE">Civil Engineering</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="personal-next" class="next-btn">Next</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Academic Information Section -->
+            <section id="academic-info">
+                <h2>Academic Information</h2>
+                <form id="academic-form">
+                    <div id="subjects-container">
+                        <!-- Subjects will be dynamically added here based on branch selection -->
+                    </div>
+                    <div class="form-group">
+                        <label for="attendance">Overall Attendance (%):</label>
+                        <input type="number" id="attendance" name="attendance" min="0" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="academic-prev" class="prev-btn">Previous</button>
+                        <button type="button" id="academic-next" class="next-btn">Next</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Course Selection Section -->
+            <section id="course-selection">
+                <h2>Course Selection</h2>
+                <p>Select the courses you have completed:</p>
+                <div id="courses-container" class="courses-grid">
+                    <!-- Courses will be dynamically added here -->
+                </div>
+                <div class="form-group">
+                    <button type="button" id="course-prev" class="prev-btn">Previous</button>
+                    <button type="button" id="course-next" class="next-btn">Generate Results</button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results">
+                <h2>Your Academic Profile</h2>
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <h3 id="result-name"></h3>
+                        <p id="result-roll"></p>
+                        <p id="result-branch-sem"></p>
+                    </div>
+                    <div class="profile-body">
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-label">Current CGPA</span>
+                                <span id="current-cgpa" class="stat-value"></span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Attendance</span>
+                                <span id="attendance-result" class="stat-value"></span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Completed Courses</span>
+                                <span id="completed-courses" class="stat-value"></span>
+                            </div>
+                        </div>
+                        <div class="target-cgpa">
+                            <h4>Target CGPA Calculator</h4>
+                            <div class="target-input">
+                                <label for="target-cgpa-input">Target CGPA:</label>
+                                <input type="number" id="target-cgpa-input" min="0" max="10" step="0.1" value="8.0">
+                                <button id="calculate-target" class="btn">Calculate</button>
+                            </div>
+                            <div id="target-result" class="target-result"></div>
+                        </div>
+                        <div class="recommendations">
+                            <h4>Recommendations</h4>
+                            <ul id="recommendations-list">
+                                <!-- Recommendations will be added here -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="button" id="results-prev" class="prev-btn">Previous</button>
+                    <button type="button" id="start-over" class="btn">Start Over</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Student Evaluation System | College Project</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
