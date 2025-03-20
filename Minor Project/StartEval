@@ -1,0 +1,197 @@
+create a student performance form that contain name, roll no., branch, semester, attendence in persentage, external marks in grade, internal marks in grade, no. of cisco certification, upload cisco certificate and calculate performance button.
+
+in semester option - for 1st semester :
+                             External marks in grade for each subject :
+                             (BT-101-ENGINEERING-CHEMISTRY		
+                              BT-102-MATHEMATICS-1		
+                              BT-103-ENGLISH-FOR-COMMUNICATION		
+                              BT-104-BASIC-ELECTRICAL-AND-ELECTRONICS-ENGINEERING		
+                              BT-105-ENGINEERING-GRAPHICS)
+
+                              Internal marks in grade for each subject :
+                              (BT-106-MANUFACTURING-PRACTICES
+                              BT-101-ENGINEERING-CHEMISTRY				
+                              BT-103-ENGLISH-FOR-COMMUNICATION		
+                              BT-104-BASIC-ELECTRICAL-AND-ELECTRONICS-ENGINEERING
+                              BT-105-ENGINEERING-GRAPHICS).
+
+in semester option - for 2nd semester :
+                            External marks in grade for each subject :
+                            (BT-201-ENGINEERING-PHYSICS		
+                            BT-202-MATHEMATICS-2		
+                            BT-203-BASIC-COMPUTER-ENGINEERING		
+                            BT-204-BASIC-MECHANICAL-ENGINEERING		
+                            BT-205-BASIC-CIVIL-ENGINEERING-AND-MECHANICS)
+
+                            Internal marks in grade for each subject :
+                            (BT-206-LANGUAGE-LAB-AND-SEMINARS
+                            BT-201-ENGINEERING-PHYSICS		
+                            BT-203-BASIC-COMPUTER-ENGINEERING		
+                            BT-204-BASIC-MECHANICAL-ENGINEERING		
+                            BT-205-BASIC-CIVIL-ENGINEERING-AND-MECHANICS).
+
+in semester option - for 3rd semester :
+                        External marks in grade for each subject :   
+                        (ES301 Energy & Environmental Engineering 
+                        CS302 Discrete Structure 
+                        CS303 Data Structure 
+                        CS304 Digital Systems 
+                        CS305 Object Oriented Programming & Methodology)
+
+                        Internal marks in grade for each subject :
+                        (CS303 Data Structure 
+                        CS304 Digital Systems 
+                        CS305 Object Oriented Programming & Methodology
+                        CS306 Computer Workshop).
+
+in semester option - for 4th semester :
+                    External marks in grade for each subject :  
+                    (BT-401 Mathematics-III
+                     CS-402 Analysis Design of Algorithm
+                     CS-403 Software Engineering
+                     CS-404 Computer Org. & Architecture
+                     CS-405 Operating System)
+
+                     Internal marks in grade for each subject :
+                     (CS-402 Analysis Design of Algorithm
+                     CS-403 Software Engineering
+                     CS-404 Computer Org. & Architecture
+                     CS-405 Operating System
+                     CS-406 - choose one : (A) Programming Practices (Java)
+                                           (B) Programming Practices ( Dot Net Technologies)
+                                           (C) (Programming Practices)
+                                           (D) (Programming Practices MATLAB)
+                              
+                     ).
+
+in semester option - for 5th semester :
+                    External marks in grade for each subject : 
+                    (CS-501 Theory of Computation
+                     CS-502 Database Management Systems
+                     CS-503 - choose one : (A) Data Analysis (Departmental Elective)
+                                           (B) Pattern Recognition (Departmental Elective)
+                                           (C) Cyber Security (Departmental Elective )
+                     CS-504 - choose one : (A) Internet and Web Technology (Open Elective)
+                                           (B) Object Oriented Programming (Open Elective)
+                                           (C) Introduction to Database Management System (Open Elective )
+                     ).
+
+                     Internal marks in grade for each subject :
+                      (CS-501 Theory of Computation
+                      CS-502 Database Management Systems
+                      CS-505 Linux (LAB)
+                      CS-506 Python
+                      CS-508 Minor Project-I)
+
+
+in semester option - for 6th semester :
+                    External marks in grade for each subject : 
+                    (
+                     CS-601 Machine Learning
+                     CS-602 Computer Networks
+                     CS-603 - choose one : (A) Advanced Computer Architecture (ACA) (Departmental Elective)
+                                           (B) Computer Graphics & Visulization (Departmental Elective)
+                                           (C) Compiler Design (Departmental Elective )
+                     CS-604 - choose one : (A) Knowledge Management (Open Elective)
+                                           (B) Project Management (Open Elective)
+                                           (C) Rural Technology & Community Development (Open Elective ))
+
+                    Internal marks in grade for each subject :
+                    ( CS-601 Machine Learning
+                     CS-602 Computer Networks
+                     CS-605 Data Analytics (LAB)
+                     CS-606 Skill Development LAB
+                     CS-608 Minor Project-II).                    
+
+in semester option - for 7th semester :
+                    External marks in grade for each subject : 
+                    (CS-701 Software Architectures
+                     CS-702 - choose one : (A) Computational Intelligence Networks (Departmental Elective)
+                                           (B) Deep & Reinforcement Learning (Departmental Elective)
+                                           (C) Wireless & Mobile Computing (Departmental Elective)
+                                           (D) Big Data (Departmental Elective )
+                     CS-703 - choose one : (A) Cryptography & Information Security (Open Elective)
+                                           (B) Data Mining And Warehousing (Open Elective)
+                                           (C) Agile Software Development (Open Elective )
+                                           (D) Disaster Management (Open Elective))
+
+                    Internal marks in grade for each subject :
+                    (CS-701 Software Architectures
+                     CS 704  Lab Departmental Elective Lab
+                     CS 705  lab Open Elective Lab 
+                     CS 706  Major Project-I ).
+
+in semester option - for 7th semester : 
+                    External marks in grade for each subject : 
+                    (
+                     CS-801 Internet of Things
+                     CS-802 - choose one : (A) lock Chain Technologies (Departmental Elective)
+                                           (B) Cloud Computing (Departmental Elective)
+                                           (C) High Performance Computing (Departmental Elective)
+                                           (D) Object Oriented Software Engineering  (Departmental Elective )
+                     CS-803 - choose one : (A) Image Processing and Computer Vision (Open Elective)
+                                           (B) Game Theory with Engineering applications (Open Elective)
+                                           (C) Internet of Things (Open Elective )
+                                           (D) Managing Innovation and Entrepreneurship (Open Elective )).
+
+                    Internal marks in grade for each subject :
+                    (CS-801 Internet of Things
+                    CS-804 D/O elective lab 
+                    CS-706  Major Project-II).
+
+in grade option for each subject - choose one : 1. A+
+                                                2. A
+                                                3. B+
+                                                4. B
+                                                5. C+
+                                                6. C
+                                                7. D
+                                                8. F
+
+calculation for extenal marks out of 70 for each subject - A+ = 66.5 above 
+                                                           A = 60 and above
+                                                           B+ = 55 and above
+                                                           B = 46 and above
+                                                           C+ = 40 and above
+                                                           C = 33 above
+                                                           D = 23 and above
+                                                           F = below 23
+
+calculation for Internal marks out of 80 for each subject - A+ = 76 and above
+                                                            A = 69 and above
+                                                            B+ = 63 and above
+                                                            B = 53 and above
+                                                            C+ = 46 and above
+                                                            C = 38 above
+                                                            D = 27 and above
+                                                            F = Below 27
+
+Total semester marks for each:
+                             1st Semester: 660 marks
+                             2nd Semester: 660 marks
+                             3rd Semester: 660 marks
+                             4th Semester: 660 marks
+                             5th Semester: 740 marks
+                             6th Semester: 740 marks
+                             7th Semester: 760 marks
+                             8th Semester: 680 marks
+
+
+
+assign grade according to this :  
+Grading Scale for Each Semester
+Semester	Total Marks	  A+ (95%)	          A (86%)	     B+ (79%)	      B (65%)	          C+ (55%)	         C (45%)	           D (35%)	    F (<35%)
+1st	           660	     627 & above	     568 & above	521 & above	     429 & above	     363 & above	     297 & above	     231 & above	Below 231
+2nd	           660	     627 & above	     568 & above	521 & above	     429 & above	     363 & above	     297 & above	     231 & above	Below 231
+3rd	           660	     627 & above	     568 & above	521 & above	     429 & above	     363 & above	     297 & above	     231 & above	Below 231
+4th	           660	     627 & above	     568 & above	521 & above	     429 & above	     363 & above	     297 & above	     231 & above	Below 231
+5th	           740	     703 & above	     636 & above	585 & above	     481 & above	     407 & above	     333 & above	     259 & above	Below 259
+6th	           740	     703 & above	     636 & above	585 & above	     481 & above	     407 & above	     333 & above	     259 & above	Below 259
+7th	           760	     722 & above	     654 & above	600 & above	     494 & above	     418 & above	     342 & above	     266 & above	Below 266
+8th	           680	     646 & above	     585 & above	537 & above	     442 & above	     374 & above	     306 & above	     238 & above	Below 238
+
+
+if no. of cisco certification has done by student then add 5 marks for each certificate
+
+give result in grade according to this Grading Scale and cisco certificate sudent performance
+
