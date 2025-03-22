@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Performance Form</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold text-center mb-6">Semester Marks Calculator</h1>
+    
+    <!-- Navigation Tabs -->
+    <div class="flex border-b mb-6">
+      <button id="calculatorTab" class="py-2 px-4 text-blue-600 border-b-2 border-blue-600 font-medium">Calculator</button>
+      <button id="certificatesTab" class="py-2 px-4 text-gray-600 font-medium">My Certificates</button>
+    </div>
+    
+    <!-- Calculator Section -->
+    <div id="calculatorSection">
+    <!-- Semester Selection -->
+    <div class="mb-6">
+      <label for="semesterSelect" class="block text-gray-700 font-bold mb-2">
+        Select Semester:
+      </label>
+      <select id="semesterSelect" class="border rounded py-2 px-3 w-full max-w-sm" name="Semester">
+        <option value="">-- Choose Semester --</option>
+        <option value="1">1<sup>st</sup> Semester</option>
+        <option value="2">2<sup>nd</sup> Semester</option>
+        <option value="3">3<sup>rd</sup> Semester</option>
+        <option value="4">4<sup>th</sup> Semester</option>
+        <option value="5">5<sup>th</sup> Semester</option>
+        <option value="6">6<sup>th</sup> Semester</option>
+        <option value="7">7<sup>th</sup> Semester</option>
+        <option value="8">8<sup>th</sup> Semester</option>
+      </select>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Dynamic Form Container -->
+    <form id="marksForm" class="bg-white shadow-md rounded p-6 mb-6 hidden" action="/StudentInfo" method="post"
+        
+    >
+      <!-- External Subjects -->
+      <h2 class="text-2xl font-semibold mb-4">External Marks (Grade – out of 70)</h2>
+      <div id="externalSubjects" class="space-y-4"></div>
+      
+      <!-- Internal Subjects -->
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Internal Marks (Grade – out of 80)</h2>
+      <div id="internalSubjects" class="space-y-4"></div>
+      
+
+      <!-- Calculate Button -->
+      <div class="mt-8">
+        <button type="button" id="calculateButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" name="CalculateMarks">
+          Calculate Marks
+        </button>
+      </div>
+      
+      <!-- Result Display -->
+      <div id="resultSection" class="mt-6 p-4 bg-gray-100 border rounded text-gray-700"></div>
+    </form>
+
+
+
+    </div>
+
+
+
+
+    
+    <!-- Certificate Gallery Section -->
+    <div id="certificateSection" class="hidden">
+      <div class="bg-white shadow-md rounded p-6 mb-6">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-semibold">My Certificates</h2>
+          <button id="uploadCertBtn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+            Upload External Certificate
+          </button>
+        </div>
+        
+        <div id="certificateGallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Certificates will be displayed here -->
+          <p id="noCertificates" class="col-span-full text-center text-gray-500 py-8">
+            No certificates yet. Calculate your semester marks and save certificates or upload external certificates.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Upload Certificate Modal -->
+    <div id="uploadModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+      <div class="bg-white w-11/12 max-w-md rounded-lg shadow-lg p-6">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-xl font-bold">Upload External Certificate</h3>
+          <button id="closeModalBtn" class="text-gray-600 hover:text-gray-800 text-2xl">&times;</button>
+        </div>
+        
+        <form id="uploadForm">
+          <div class="mb-4">
+            <label for="certTitle" class="block text-gray-700 font-bold mb-2">Certificate Title*</label>
+            <input type="text" id="certTitle" class="border rounded py-2 px-3 w-full" required>
+          </div>
+          
+          <div class="mb-4">
+            <label for="certSemester" class="block text-gray-700 font-bold mb-2">Semester</label>
+            <select id="certSemester" class="border rounded py-2 px-3 w-full">
+              <option value="">-- Select Semester (Optional) --</option>
+              <option value="1">1st Semester</option>
+              <option value="2">2nd Semester</option>
+              <option value="3">3rd Semester</option>
+              <option value="4">4th Semester</option>
+              <option value="5">5th Semester</option>
+              <option value="6">6th Semester</option>
+              <option value="7">7th Semester</option>
+              <option value="8">8th Semester</option>
+            </select>
+          </div>
+          
+          <div class="mb-4">
+            <label for="certGrade" class="block text-gray-700 font-bold mb-2">Grade/Score*</label>
+            <input type="text" id="certGrade" class="border rounded py-2 px-3 w-full" required>
+            <p class="text-xs text-gray-500 mt-1">Example: A+, 95%, etc.</p>
+          </div>
+          
+          <div class="mb-4">
+            <label for="certFile" class="block text-gray-700 font-bold mb-2">Certificate Image (Optional)</label>
+            <input type="file" id="certFile" class="border rounded py-2 px-3 w-full" accept="image/*">
+          </div>
+          
+          <div class="flex justify-end space-x-2 mt-6">
+            <button type="button" id="cancelUploadBtn" class="px-4 py-2 bg-gray-300 hover:bg-gray-400 text-gray-800 rounded">Cancel</button>
+            <button type="submit" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded">Upload</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/student-evaluation/views/logic.js"></script>
+
+ 
+</body>
+</html>
