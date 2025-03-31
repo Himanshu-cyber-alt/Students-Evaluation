@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Your Profile</title>
+    <link rel="stylesheet" href="Profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h2>Edit Your Profile</h2>
+        <form>
+            <div class="input-group">
+                <input type="text" placeholder="First Name" required>
+                <i class="fas fa-user"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="text" placeholder="Last Name" required>
+                <i class="fas fa-user"></i>
+            </div>
+
+
+            <div class="input-group">
+                <input type="email" placeholder="Email" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+
+            <div class="select-group">
+                <select name="branch" required>
+                    <option value="" disabled selected>Select Branch</option>
+                    <option value="computer">Computer Science Engineering</option>
+                    <option value="mechanical">Mechanical Engineering</option>
+                    <option value="electrical">Electrical Engineering</option>
+                    <option value="electronics">Electronics Engineering</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="chemical">Chemical Engineering</option>
+                    <option value="aerospace">Aerospace Engineering</option>
+                    <option value="biomedical">Biomedical Engineering</option>
+                    <option value="industrial">Industrial Engineering</option>
+                    <option value="environmental">Environmental Engineering</option>
+                    <option value="metallurgical">Metallurgical Engineering</option>
+                    <option value="mining">Mining Engineering</option>
+                    <option value="petroleum">Petroleum Engineering</option>
+                    <option value="agricultural">Agricultural Engineering</option>
+                    <option value="marine">Marine Engineering</option>
+                    <option value="robotics">Robotics Engineering</option>
+                    <option value="telecommunications">Telecommunications Engineering</option>
+                    <option value="other">Other</option>
+                </select>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="select-group">
+                <select name="year" required>
+                    <option value="" disabled selected>Select Year</option>
+                    <optgroup label="Undergraduate">
+                        <option value="1-year">1st Year</option>
+                        <option value="2-year">2nd Year</option>
+                        <option value="3-year">3rd Year</option>
+                        <option value="4-year">4th Year</option>
+                        <option value="lateral-2">Lateral Entry - 2nd Year</option>
+                        <option value="lateral-3">Lateral Entry - 3rd Year</option>
+                    </optgroup>
+                    <optgroup label="Postgraduate">
+                        <option value="pg-1">PG - 1st Year</option>
+                        <option value="pg-2">PG - 2nd Year</option>
+                        <option value="pg-3">PG - 3rd Year</option>
+                    </optgroup>
+                    <optgroup label="Research">
+                        <option value="phd">Ph.D. Scholar</option>
+                        <option value="postdoc">Post Doctoral</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="diploma">Diploma</option>
+                        <option value="certificate">Certificate Course</option>
+                        <option value="alumni">Alumni</option>
+                    </optgroup>
+                </select>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="certification-section">
+                <div class="input-group">
+                    <input type="number" id="certificationCount" placeholder="Number of Certifications" min="0" required>
+                 <!-- <i id="c1" class="fas fa-certificate"></i> -->
+                </div>
+                <div id="certificationUploads" class="certification-uploads">
+                    <!-- Certification upload fields will be added here dynamically -->
+                </div>
+            </div>
+
+            <button type="submit" class="update-btn">Update Profile</button>
+        </form>
+    </div>
+
+    <script src="Profile.js"></script>
+</body>
+</html>
