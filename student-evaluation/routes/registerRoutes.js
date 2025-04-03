@@ -25,7 +25,7 @@ routes.post('/register', async (req, res) => {
 
         
  
-            const result = await pool.query('select * from students where roll_number = $1',[RollNumber])
+            const result = await pool.query('select * from main_table where roll = $1',[RollNumber])
 
             if(result.rows.length>0){
                 console.log(result)
@@ -39,7 +39,7 @@ routes.post('/register', async (req, res) => {
                   } else{
                      
                         
-                    const result2 = await pool.query('INSERT INTO students(name,roll_number,password) VALUES ($1,$2,$3)', [Name,RollNumber,hash]);
+                    const result2 = await pool.query('INSERT INTO main_table(name,roll,password) VALUES ($1,$2,$3)', [Name,RollNumber,hash]);
                     console.log(result2)
                   res.render('login.ejs'); 
                   }

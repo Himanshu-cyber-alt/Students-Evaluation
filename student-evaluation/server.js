@@ -52,7 +52,7 @@ import registerRoutes from "./routes/registerRoutes.js";
 import aboutRoutes from './routes/aboutRoutes.js';
 import loginRoutes from './routes/loginRoutes.js';
 import EvaluationRoutes from './routes/EvaluationRoutes.js';
-
+import profileRoutes from './routes/profileRoutes.js'
 import session from 'express-session';
 import passport from 'passport';
 import { Strategy } from 'passport-local';
@@ -65,6 +65,13 @@ const port = 7000;
 app.set("view engine", "ejs"); 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
+
+
+
+   app.get('/home',(req,res)=>{
+          res.render('home.ejs')
+   })
+
 
 //  first we setup sesssion this is step => 1
 app.use(session({
@@ -88,7 +95,7 @@ passport.use(new Strategy({
     passwordField: 'Password'     
 }, async function(rollNumber, password, callBack) {
     try {
-        const result = await pool.query('SELECT roll_number, password FROM students WHERE roll_number = $1', [rollNumber]);
+        const result = await pool.query('SELECT roll, password FROM main_table WHERE roll = $1', [rollNumber]);
         
         if (result.rows.length > 0) {
             const user = result.rows[0];
@@ -118,14 +125,14 @@ passport.use(new Strategy({
 
 
 passport.serializeUser((user, callBack) => {
-    callBack(null, user.roll_number); //  
+    callBack(null, user.roll); //  
 });
 
 
 
 passport.deserializeUser(async (rollNumber, callBack) => {
     try {
-        const result = await pool.query('SELECT * FROM students WHERE roll_number = $1', [rollNumber]);
+        const result = await pool.query('SELECT * FROM main_table WHERE roll = $1', [rollNumber]);
         if (result.rows.length > 0) {
             callBack(null, result.rows[0]);
         } else {
@@ -142,6 +149,8 @@ app.use('/', registerRoutes);
 app.use('/', aboutRoutes);
 app.use('/', loginRoutes);
 app.use('/', EvaluationRoutes);
+app.use('/',profileRoutes)
+
 
 
 app.listen(port, () => {

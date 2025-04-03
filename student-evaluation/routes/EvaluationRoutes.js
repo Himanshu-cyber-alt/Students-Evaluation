@@ -93,6 +93,7 @@
 // EvaluationRoutes.js
 import express from 'express';
 
+
 const router = express.Router();
 
 // No need to initialize passport or sessions here, they're in server.js
@@ -105,8 +106,13 @@ function isAuthenticated(req, res, next) {
     res.redirect('/login');
 }
 
-router.get('/StartEvaluation', isAuthenticated, (req, res) => {
-    res.render('startEvaluation.ejs', { user: req.user });
+
+
+
+
+
+router.get('/profile', isAuthenticated, (req, res) => {
+    res.render('createProfile.ejs', { user: req.user });
 });
 
 export default router;
